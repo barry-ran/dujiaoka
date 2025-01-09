@@ -32,6 +32,7 @@ class WepayController extends PayController
             ];
             switch ($payway){
                 case 'wescan':
+                case 'wescan2':
                     try{
                         $result = Pay::wechat($config)->scan($order)->toArray();
                         $result['qr_code'] = $result['code_url'];

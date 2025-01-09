@@ -18,6 +18,7 @@ $(function() {
 		pszfb      : alipaySvg,
 		pswx       : weChatSvg,
 		wescan     : weChatSvg,
+		wescan2    : weChatSvg,
 		payjswescan: weChatSvg,
 		alipay     : alipaySvg,
 		wxpay      : weChatSvg,
