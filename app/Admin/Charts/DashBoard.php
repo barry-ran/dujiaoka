@@ -34,6 +34,7 @@ class DashBoard extends RadialBar
             'today' => admin_trans('dujiaoka.last_today'),
             'seven' => admin_trans('dujiaoka.last_seven_days'),
             'month' => admin_trans('dujiaoka.last_month'),
+            'half_year' => admin_trans('dujiaoka.last_half_year'),
             'year' => admin_trans('dujiaoka.last_year'),
         ]);
     }
@@ -54,6 +55,9 @@ class DashBoard extends RadialBar
                 break;
             case 'month':
                 $startTime = Carbon::now()->subDays(30);
+                break;
+            case 'half_year':
+                $startTime = Carbon::now()->subDays(183);
                 break;
             case 'year':
                 $startTime = Carbon::now()->subDays(365);

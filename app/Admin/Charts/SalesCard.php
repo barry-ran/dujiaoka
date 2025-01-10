@@ -37,9 +37,11 @@ class SalesCard extends Bar
         $this->title(admin_trans('dujiaoka.sales_chart'));
         // 设置下拉选项
         $this->dropdown([
-            'seven' => admin_trans('dujiaoka.last_seven_days'),
             'today' => admin_trans('dujiaoka.last_today'),
+            'seven' => admin_trans('dujiaoka.last_seven_days'),            
             'month' => admin_trans('dujiaoka.last_month'),
+            'half_year' => admin_trans('dujiaoka.last_half_year'),
+            'year' => admin_trans('dujiaoka.last_year'),
         ]);
         // 设置图表颜色
         $this->chartColors([
@@ -65,11 +67,15 @@ class SalesCard extends Bar
             case 'month':
                 $startTime = Carbon::now()->subDays(30);
                 break;
-            case 'today':
-                $startTime = Carbon::today();
+            case 'half_year':
+                $startTime = Carbon::now()->subDays(183);
                 break;
+            case 'year':
+                $startTime = Carbon::now()->subDays(365);
+                break;
+            case 'today':
             default:
-                $startTime =  Carbon::now()->subDays(7);
+                $startTime = Carbon::today();
         }
         // 分组查询
         $orderGroup = Order::query()

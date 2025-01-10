@@ -27,6 +27,7 @@ return [
     'last_seven_days' => '最近7天',
     'last_today' => '今天',
     'last_month' => '最近一个月',
+    'last_half_year' => '最近半年',
     'last_year' => '最近一年',
 
     'status_pending_number' => '待处理订单数',

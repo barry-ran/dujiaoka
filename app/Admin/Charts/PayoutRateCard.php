@@ -37,9 +37,10 @@ class PayoutRateCard extends Donut
         // 设置图表颜色
         $this->chartColors($colors);
         $this->dropdown([
-            'seven' => admin_trans('dujiaoka.last_seven_days'),
             'today' => admin_trans('dujiaoka.last_today'),
+            'seven' => admin_trans('dujiaoka.last_seven_days'),            
             'month' => admin_trans('dujiaoka.last_month'),
+            'half_year' => admin_trans('dujiaoka.last_half_year'),
             'year' => admin_trans('dujiaoka.last_year'),
         ]);
     }
@@ -61,14 +62,15 @@ class PayoutRateCard extends Donut
             case 'month':
                 $startTime = Carbon::now()->subDays(30);
                 break;
+            case 'half_year':
+                $startTime = Carbon::now()->subDays(183);
+                break;
             case 'year':
                 $startTime = Carbon::now()->subDays(365);
                 break;
             case 'today':
-                $startTime = Carbon::today();
-                break;
             default:
-                $startTime =  Carbon::now()->subDays(7);
+                $startTime = Carbon::today();
         }
         // 成功的数量
         $success = Order::query()
