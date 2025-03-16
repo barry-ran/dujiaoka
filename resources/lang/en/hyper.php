@@ -1,0 +1,133 @@
+<?php
+
+return [
+
+    # Hyper Theme
+
+    'notice_announcement' => 'Notice',
+    'error_back_btn' => 'Back',
+    'error_error' => 'Error',
+    'order_search' => 'Search Orders',
+    'global_currency' => '¥',
+
+    # home.blade.php
+
+    'home_title' => 'Home',
+    'home_search_box' => 'Enter keywords to search...',
+    'home_product_name' => 'Product Name',
+    'home_product_class' => 'Type',
+    'home_in_stock' => 'Stock',
+    'home_price' => 'Price',
+    'home_place_an_order' => 'Operation',
+    'home_discount' => 'Discount',
+    'home_automatic_delivery' => 'Automatic Delivery',
+    'home_charge' => 'Manual Delivery',
+    'home_buy' => 'Buy',
+    'home_out_of_stock' => 'Out of Stock',
+    'home_whole' => 'All',
+    'home_tip' => 'Tip',
+    'home_sell_out_tip' => 'The product is out of stock.',
+    
+    # buy.blade.php
+    'buy_title' => 'Product Details',
+    'buy_automatic_delivery' => 'Automatic Delivery',
+    'buy_charge' => 'Manual Delivery',
+    'buy_purchase' => 'Purchase',
+    'buy_the_above' => 'Minimum purchase quantity:',
+    'buy_each' => 'Price per piece:',
+    'buy_price' => 'Price',
+    'buy_email' => 'Email',
+    'buy_input_account' => 'Receive card password or notification',
+    'buy_purchase_quantity' => 'Purchase Quantity',
+    'buy_in_stock' => 'Stock',
+    'buy_purchase_restrictions' => 'Purchase Limit',
+    'buy_search_password' => 'Search Password',
+    'buy_input_search_password' => 'Enter the order search password',
+    'buy_promo_code' => 'Promo Code',
+    'buy_input_promo_code' => 'Do you have a promo code?',
+    'buy_choose_payment_method' => 'Please select a payment method',
+    'buy_behavior_verification' => 'Behavior Verification',
+    'buy_verify_code' => 'Verification Code',
+    'buy_payment_method' => 'Payment Method',
+    'buy_order_now' => 'Submit Order',
+    'buy_product_desciption' => 'Product Details',
+    'buy_warning' => 'Warning!',
+    'buy_purchase_tips' => 'Tips',
+    'buy_empty_mailbox' => 'The mailbox cannot be empty!',
+    'buy_zero_quantity' => 'The purchase quantity cannot be 0!',
+    'buy_exceeds_stock' => 'The quantity is not allowed to be greater than the stock!',
+    'buy_exceeds_limit' => 'The purchase limit has been exceeded!',
+    'buy_empty_query_password' => 'The search password cannot be empty!',
+    'buy_empty_payment_method' => 'No payment method has been selected!',
+    'buy_empty_captcha' => 'The verification code cannot be empty!',
+    'buy_correct_verification' => 'Please complete the behavior verification correctly!',
+    
+    # bill.blade.php
+
+    'bill_title' => 'Confirm Order',
+    'bill_order_number' => 'Order Number',
+    'bill_product_name' => 'Order Name',
+    'bill_commodity_price' => 'Unit Price',
+    'bill_purchase_quantity' => 'Purchase Quantity',
+    'bill_promo_code' => 'Promo Code',
+    'bill_discounted_price' => 'Discounted Amount',
+    'bill_actual_payment' => 'Total Price',
+    'bill_email' => 'Email',
+    'bill_order_information' => 'Order Information',
+    'bill_payment_method' => 'Payment Method',
+    'bill_pay_immediately' => 'Pay Immediately',
+
+    # orderinfo.blade.php
+
+    'orderinfo_title' => 'Order Details',
+    'orderinfo_order_title' => 'Order Name',
+    'orderinfo_number_of_orders' => 'Order Quantity',
+    'orderinfo_order_time' => 'Order Time',
+    'orderinfo_email' => 'Email',
+    'orderinfo_order_class' => 'Order Type',
+    'orderinfo_automatic_delivery' => 'Automatic Delivery',
+    'orderinfo_charge' => 'Manual Delivery',
+    'orderinfo_total_order_price' => 'Total Order Price',
+    'orderinfo_order_status' => 'Order Status',
+    'orderinfo_status_expired' => 'Expired',
+    'orderinfo_status_wait_pay' => 'Pending Payment',
+    'orderinfo_status_pending' => 'Pending',
+    'orderinfo_status_processed' => 'Processed',
+    'orderinfo_status_completed' => 'Completed',
+    'orderinfo_status_failed' => 'Failed',
+    'orderinfo_status_abnormal' => 'Abnormal Status',
+    'orderinfo_payment_method' => 'Payment Method',
+    'orderinfo_carmi' => 'Card Password',
+    'orderinfo_copy_carmi' => 'Copy Card Password',
+    'orderinfo_tips' => 'Tips',
+    'orderinfo_copy_success' => 'Copied successfully',
+    'orderinfo_copy_error' => 'Copy failed',
+    'orderinfo_order_information' => 'No order information found',
+    
+    # qrpay.blade.php
+
+    'qrpay_title' => 'Scan to Pay',
+    'qrpay_order_expiration_date' => 'Order Expiration Date',
+    'qrpay_expiration_date' => 'Minutes',
+    'qrpay_actual_payment' => 'Total Price',
+    'qrpay_open_app_to_pay' => 'Open the app to pay',
+    'qrpay_notice' => 'Notice',
+    'payment_successful' => 'Payment successful!',
+    'order_pay_timeout' => 'Payment timed out!',
+    
+    # searchOrder.blade.php
+
+    'searchOrder_title' => 'Search Orders',
+    'searchOrder_query_tips' => 'Note: You can search for a maximum of the last 5 orders.',
+    'searchOrder_order_search_by_number' => 'Order',
+    'searchOrder_order_search_by_email' => 'Email',
+    'searchOrder_order_search_by_ie' => 'Cache',
+    'searchOrder_order_number' => 'Order Number',
+    'searchOrder_search_now' => 'Search Now',
+    'searchOrder_reset_order' => 'Reset',
+    'searchOrder_email' => 'Email',
+    'searchOrder_search_password' => 'Search Password',
+    'searchOrder_input_order_number' => 'Please enter the order number',
+    'searchOrder_input_email' => 'Please enter the email',
+    'searchOrder_input_query_password' => 'Please enter the search password'
+];
