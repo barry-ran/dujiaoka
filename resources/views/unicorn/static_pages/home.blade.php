@@ -42,13 +42,13 @@
                     </div>
                     <div class="col-md-12">
                         <div class="category-menus">
-                                <ul class="nav nav-pills  justify-content-center">
+                            <ul class="nav nav-pills  justify-content-center">
                                     <li class="nav-item">
-                                        <a href="#group-all" data-bs-toggle="tab" class="btn btn-outline-secondary active">{{ __('dujiaoka.group_all') }}</a>
+                                        <a href="#group-all" data-bs-toggle="tab" class="btn btn-outline-secondary {{ $defaultGroupId == 'all' ? 'active' : '' }}">{{ __('dujiaoka.group_all') }}</a>
                                     </li>
                                     @foreach($data as  $index => $group)
                                         <li class="nav-item">
-                                            <a href="#group-{{ $group['id'] }}" data-bs-toggle="tab" class="btn btn-outline-secondary">{{ $group['gp_name'] }}</a>
+                                            <a href="#group-{{ $group['id'] }}" data-bs-toggle="tab" class="btn btn-outline-secondary {{ $defaultGroupId == $group['id'] ? 'active' : '' }}">{{ $group['gp_name'] }}</a>
                                         </li>
                                     @endforeach
                                 </ul>
@@ -66,7 +66,7 @@
                 <div class="goods-list mb-5">
                     <div id="goodsTabContent" class="tab-content">
 
-                        <div class="tab-pane fade active show" id="group-all">
+                        <div class="tab-pane fade {{ $defaultGroupId == 'all' ? 'active show' : '' }}" id="group-all">
                             <div class="row row-cols-2 row-cols-md-5 g-4">
                                 @foreach($data as  $index => $group)
                                     @foreach($group['goods'] as $goods)
@@ -112,11 +112,8 @@
                                  @endforeach
                             </div>
                         </div>
-
-
-
                         @foreach($data as  $index => $group)
-                            <div class="tab-pane fade" id="group-{{ $group['id'] }}">
+                            <div class="tab-pane fade {{ $defaultGroupId == $group['id'] ? 'active show' : '' }}" id="group-{{ $group['id'] }}">
                                 <div class="row row-cols-2 row-cols-md-5 g-4">
                                     @foreach($group['goods'] as $goods)
                                         <div class="col">

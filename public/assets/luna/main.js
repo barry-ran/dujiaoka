@@ -80,7 +80,17 @@
             $('.cate').empty().append(cateHtml).on('click', '.cate-box', function () {
                 changeCate($(this).data('key'));
             });
-            changeCate(0);
+
+            // 根据传入的默认分组ID选择对应的分组
+            let defaultCateIndex = 0;
+            if (typeof defaultGroupId !== 'undefined' && defaultGroupId !== 'all') {
+                goodsMsg.forEach(function (i, k) {
+                    if (i.id == defaultGroupId) {
+                        defaultCateIndex = k;
+                    }
+                });
+            }
+            changeCate(defaultCateIndex);
         }
 
 

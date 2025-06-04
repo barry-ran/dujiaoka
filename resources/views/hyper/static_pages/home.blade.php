@@ -22,7 +22,7 @@
     </div>
 </div>
 <div class="nav nav-list">
-    <a href="#group-all" class="tab-link active" data-bs-toggle="tab" aria-expanded="false" role="tab" data-toggle="tab">
+    <a href="#group-all" class="tab-link {{ $defaultGroupId == 'all' ? 'active' : '' }}" data-bs-toggle="tab" aria-expanded="false" role="tab" data-toggle="tab">
         <span class="tab-title">
         {{-- 全部 --}}
         {{ __('hyper.home_whole') }}
@@ -32,7 +32,7 @@
         </div>
     </a>
     @foreach($data as  $index => $group)
-    <a href="#group-{{ $group['id'] }}" class="tab-link" data-bs-toggle="tab" aria-expanded="false" role="tab" data-toggle="tab">
+    <a href="#group-{{ $group['id'] }}" class="tab-link {{ $defaultGroupId == $group['id'] ? 'active' : '' }}" data-bs-toggle="tab" aria-expanded="false" role="tab" data-toggle="tab">
         <span class="tab-title">
             {{ $group['gp_name'] }}
         </span>
@@ -43,7 +43,7 @@
     @endforeach
 </div>
 <div class="tab-content">
-    <div class="tab-pane active" id="group-all">
+    <div class="tab-pane {{ $defaultGroupId == 'all' ? 'active' : '' }}" id="group-all">
         <div class="hyper-wrapper">
             @foreach($data as $group)
                 @foreach($group['goods'] as $goods)
@@ -71,7 +71,7 @@
         </div>
     </div>
     @foreach($data as  $index => $group)
-        <div class="tab-pane" id="group-{{ $group['id'] }}">
+        <div class="tab-pane {{ $defaultGroupId == $group['id'] ? 'active' : '' }}" id="group-{{ $group['id'] }}">
             <div class="hyper-wrapper">
                 @foreach($group['goods'] as $goods)
                     @if($goods['in_stock'] > 0)

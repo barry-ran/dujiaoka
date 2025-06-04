@@ -102,7 +102,8 @@
 
     <script>
         let title    = "{{ __('dujiaoka.site_announcement') }}",
-            goodsMsg = {!! json_encode($data) !!};
+            goodsMsg = {!! json_encode($data) !!},
+            defaultGroupId = '{{ $defaultGroupId ?? "all" }}';
     </script>
 @endsection
 

@@ -47,7 +47,22 @@ class HomeController extends BaseController
     public function index(Request $request)
     {
         $goods = $this->goodsService->withGroup();
-        return $this->render('static_pages/home', ['data' => $goods], __('dujiaoka.page-title.home'));
+        
+        // 获取默认选中的商品分组ID
+        $defaultGroupId = $request->input('group_id', 'all');
+        
+        // 验证分组ID是否有效
+        if ($defaultGroupId !== 'all' && $goods) {
+            $validGroupIds = collect($goods)->pluck('id')->toArray();
+            if (!in_array($defaultGroupId, $validGroupIds)) {
+                $defaultGroupId = 'all';
+            }
+        }
+        
+        return $this->render('static_pages/home', [
+            'data' => $goods, 
+            'defaultGroupId' => $defaultGroupId
+        ], __('dujiaoka.page-title.home'));
     }
 
     /**
