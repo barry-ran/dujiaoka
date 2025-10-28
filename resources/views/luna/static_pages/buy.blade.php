@@ -77,10 +77,10 @@
                                     </span>
                                 </div>
                                 <div class="price">
-                                    <span class="price-sign">￥</span>
-                                    <span class="price-num">{{ $actual_price }}</span>
+                                    <span class="price-sign">$</span>
+                                    <span class="price-num">{{ $actual_price > 6 ? ceil($actual_price / 6) : $actual_price }}</span>
                                     @if((int)$retail_price)
-                                        <span class="price-c">[<del>￥{{ $retail_price }}</del>]</span>
+                                        <span class="price-c">[<del>${{ $actual_price > 6 ? ceil($actual_price / 6) : $actual_price }}</del>]</span>
                                     @endif
                                 </div>
 
