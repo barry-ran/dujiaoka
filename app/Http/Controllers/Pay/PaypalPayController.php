@@ -94,7 +94,7 @@ class PaypalPayController extends PayController
         $orderSN = $request->input('orderSN');
         if ($success == 'no' || empty($paymentId) || empty($payerID)) {
             // 取消支付
-            redirect(url('detail-order-sn', ['orderSN' => $payerID]));
+            return redirect(url('detail-order-sn', ['orderSN' => $orderSN]));
         }
         $order = $this->orderService->detailOrderSN($orderSN);
         if (!$order) {
