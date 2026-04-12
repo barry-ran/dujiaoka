@@ -51,7 +51,7 @@
                                 <td style="text-align: right">{{ __('order.fields.goods_price') }}：</td>
                                 <td>
                                     <span
-                                        class="small-tips tips-green noML">{{ __('dujiaoka.money_symbol') }}{{ $goods_price > 6 ? ceil($goods_price / 6) : $goods_price }}</span>
+                                        class="small-tips tips-green noML">{{ __('dujiaoka.money_symbol') }}{{ $goods_price >= 6 ? ceil($goods_price / 6) : $goods_price }}</span>
                                 </td>
                             </tr>
                             <tr>
@@ -83,7 +83,7 @@
                                 <td style="text-align: right">{{ __('order.fields.actual_price') }}：</td>
                                 <td>
                                     <span
-                                        class="small-tips tips-green noML">{{ __('dujiaoka.money_symbol') }}{{ $actual_price > 6 ? ceil($actual_price / 6) : $actual_price }}</span>
+                                        class="small-tips tips-green noML">{{ __('dujiaoka.money_symbol') }}{{ $actual_price >= 6 ? ceil($actual_price / 6) : $actual_price }}</span>
                                 </td>
 
                             </tr>
